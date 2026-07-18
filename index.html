@@ -26,6 +26,6 @@
       </section>
     </main>
   </div>
-  <script>function tick(){document.getElementById('clock').textContent=new Date().toLocaleTimeString([], {hour:'2-digit',minute:'2-digit'});}tick();setInterval(tick,30000);</script>
+  <script>fetch('/api/auth/me').then(r=>{if(!r.ok) location.href='/api/auth/login';return r.json()}).then(u=>{if(u?.email){const m=document.querySelector('.topmeta');m.insertAdjacentHTML('beforeend','<a href="/api/auth/logout" style="color:#c9d6e2">Sign out</a>')}}).catch(()=>location.href='/api/auth/login');function tick(){document.getElementById('clock').textContent=new Date().toLocaleTimeString([], {hour:'2-digit',minute:'2-digit'});}tick();setInterval(tick,30000);</script>
 </body>
 </html>

@@ -1,0 +1,98 @@
+- generic [ref=e2]:
+  - banner [ref=e3]:
+    - generic [ref=e4]: AldoTask
+    - generic [ref=e5]:
+      - generic [ref=e6]: LIVE MONITOR
+      - generic [ref=e7]: "Custodian: Codex"
+      - generic [ref=e8]: "Worker: Claude Code"
+  - main [ref=e9]:
+    - generic [ref=e10]:
+      - generic [ref=e11]:
+        - generic [ref=e12]: Project control room
+        - heading "What needs attention?" [level=1] [ref=e13]
+        - paragraph [ref=e14]: A compact operating view for every active project, its next decision, and the work moving underneath it.
+      - button "+ New project" [ref=e15] [cursor=pointer]
+    - generic [ref=e16]:
+      - generic [ref=e17]:
+        - generic [ref=e18]: Active projects
+        - generic [ref=e19]: "1"
+        - generic [ref=e20]: AldoTask is online
+      - generic [ref=e21]:
+        - generic [ref=e22]: On track
+        - generic [ref=e23]: "1"
+        - generic [ref=e24]: No current blockers
+      - generic [ref=e25]:
+        - generic [ref=e26]: Open decisions
+        - generic [ref=e27]: "0"
+        - generic [ref=e28]: Nothing waiting on Aldo
+      - generic [ref=e29]:
+        - generic [ref=e30]: Last check
+        - generic [ref=e31]: 03:12 PM
+        - generic [ref=e32]: Live state refreshed in this view
+    - generic [ref=e33]:
+      - generic [ref=e34]:
+        - generic [ref=e35]:
+          - heading "Projects" [level=2] [ref=e36]
+          - generic [ref=e37]: Healthy
+        - generic [ref=e38]:
+          - generic [ref=e39]:
+            - heading "Argos POC" [level=3] [ref=e40]
+            - paragraph [ref=e41]: Client handoff and human demo journeys are complete.
+            - generic [ref=e44]: "Next action: client handoff · Owner: Codex · Worker: Claude Code"
+          - generic [ref=e45]:
+            - generic [ref=e46]: POC READY
+            - generic [ref=e47]: 100%
+        - generic [ref=e48]:
+          - generic [ref=e49]:
+            - heading "AldoTask" [level=3] [ref=e50]
+            - paragraph [ref=e51]: Project control board is live and ready to receive the next brief.
+            - generic [ref=e54]: "Next action: connect project intake · Owner: Codex · Worker: Claude Code"
+          - generic [ref=e55]:
+            - generic [ref=e56]: BUILDING
+            - generic [ref=e57]: 35%
+        - generic [ref=e58]:
+          - strong [ref=e59]: "PM call:"
+          - text: Keep Argos closed unless the client reports a written-step issue. Use AldoTask as the single intake and decision surface for the next project.
+      - complementary [ref=e60]:
+        - heading "Activity" [level=2] [ref=e61]
+        - generic [ref=e62]:
+          - generic [ref=e64]:
+            - strong [ref=e65]: Codex completed live Argos acceptance
+            - time [ref=e66]: Just now
+          - generic [ref=e68]:
+            - strong [ref=e69]: Claude confirmed clean handoff state
+            - time [ref=e70]: Today
+          - generic [ref=e72]:
+            - strong [ref=e73]: Hannah feedback verified fixed
+            - time [ref=e74]: Today
+          - generic [ref=e76]:
+            - strong [ref=e77]: AldoTask workspace created
+            - time [ref=e78]: Today
+        - generic [ref=e79]:
+          - text: "Next review:"
+          - code [ref=e80]: when a new project brief arrives
+    - generic [ref=e81]:
+      - generic [ref=e82]:
+        - heading "Task queue" [level=2] [ref=e83]
+        - generic [ref=e84]: 1 in progress
+      - generic [ref=e85]:
+        - generic [ref=e86]:
+          - heading "Argos client handoff" [level=3] [ref=e87]
+          - paragraph [ref=e88]: Live acceptance complete; client owns the POC from here.
+          - generic [ref=e89]: "Owner: Codex · Worker: Claude Code · Status: Done"
+        - generic [ref=e91]: DONE
+      - generic [ref=e92]:
+        - generic [ref=e93]:
+          - heading "Verify client-facing docs" [level=3] [ref=e94]
+          - paragraph [ref=e95]: Demo guide and handoff documents checked against the live app.
+          - generic [ref=e96]: "Owner: Codex · Worker: Claude Code · Status: Done"
+        - generic [ref=e98]: DONE
+      - generic [ref=e99]:
+        - generic [ref=e100]:
+          - heading "Connect next project intake" [level=3] [ref=e101]
+          - paragraph [ref=e102]: Wire AldoTask as the single intake surface for the next project brief.
+          - generic [ref=e103]: "Owner: Codex · Worker: Claude Code · Status: In progress"
+        - generic [ref=e105]: IN PROGRESS
+      - generic [ref=e106]:
+        - strong [ref=e107]: "PM next action:"
+        - text: When the next project brief arrives, capture it here as a new task before any build work starts — the queue, not chat, is the source of truth for what's in flight.
