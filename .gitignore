@@ -1,1 +1,4 @@
 .vercel
+.playwright-cli/
+.env
+.env.*

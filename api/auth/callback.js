@@ -4,6 +4,11 @@ function cookies(req) { return Object.fromEntries((req.headers.cookie || '').spl
 function sign(value) { return crypto.createHmac('sha256', process.env.AUTH_SECRET).update(value).digest('base64url'); }
 
 export default async function handler(req, res) {
+  try {
+  if (!process.env.APP_URL || !process.env.GOOGLE_CLIENT_ID || !process.env.GOOGLE_CLIENT_SECRET
+    || !process.env.AUTH_SECRET || !process.env.ALLOWED_EMAIL) {
+    return res.status(500).send('Auth is not configured on this deployment.');
+  }
   const q = new URL(req.url, process.env.APP_URL).searchParams;
   const c = cookies(req);
   if (!q.get('code') || !q.get('state') || q.get('state') !== c.aldotask_oauth_state) return res.status(400).send('Invalid OAuth state');
@@ -17,4 +22,8 @@ export default async function handler(req, res) {
   const session = `${payload}.${sign(payload)}`;
   res.setHeader('Set-Cookie', [`aldotask_session=${session}; Path=/; HttpOnly; Secure; SameSite=Lax; Max-Age=86400`, 'aldotask_oauth_state=; Path=/; HttpOnly; Secure; SameSite=Lax; Max-Age=0']);
   res.redirect('/');
+  } catch (err) {
+    console.error('auth callback error:', err);
+    return res.status(500).send('Sign-in failed. Please try again.');
+  }
 }
